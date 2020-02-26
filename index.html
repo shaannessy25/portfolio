@@ -11,49 +11,84 @@
 </head>
 <body>
     
-    <ul class='nav-bar'>
+    <!-- <ul class='nav-bar'>
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#about">About</a></li>
-    </ul>
-    <img src="./static/shaan.jpg" alt="Shaan Profile Picture" width="300px" height="300px">
-    <h1>Shaan Hurley</h1>
-    <p>Full-Stack Developer looking to change the world</p>
-    <p>I am current student at Make School set </p>
+    </ul> -->
+    <div class="nav-bar" id="nav">
+        <a href="#header">Header</a>
+        <a href="#skills">Skills</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#lnks">Links</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="container header parallax" id="header">
+            <img src="./static/shaan.jpg" alt="Shaan Profile Picture" width="300px" height="300px">
+            <h1>Shaan Hurley</h1>
+            <p>Full-Stack Developer looking to change theo wrld</p>
+            <p>I am current student at Make School set </p>
+        </div>
+    </div>
     <hr>
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+    <div class="container">
+        <div class="skills parallax" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </div>
     <hr>
-    <h2>Work Experience</h2>
-    <table>
-        <tr>
-            <td>2018 - Current</td>
-            <td>Allied Universal</td>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="work-experience parallax" id="work-experience">
+            <h2>Work Experience</h2>
+            <table>
+                <tr>
+                    <td>2018 - Current</td>
+                    <td>Allied Universal</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <hr>
-    <h2>Links</h2>
-    <a href="https://github.com/shaannessy25" target="_blank">
-        <img src="static/github.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
-    </a>
-    <a href="https://www.linkedin.com/in/shaan-hurley-670650123" target="_blank">
-        <img src="static/linkedin-logo.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
-    </a>
-    <a href="https://www.facebook.com/shaannessy" target="_blank">
-        <img src="static/facebook-logo.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
-    </a>
-    <a href="https://www.instagram.com/shaannessy/?hl=en" target="_blank">
-        <img src="static/ig-logo.jpeg" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
-    </a>
+    <div class="container">
+        <div class="lnks parallax" id="lnks">
+            <h2>Links</h2>
+            <a href="https://github.com/shaannessy25" target="_blank">
+                <img src="static/github.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
+            </a>
+            <a href="https://www.linkedin.com/in/shaan-hurley-670650123" target="_blank">
+                <img src="static/linkedin-logo.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
+            </a>
+            <a href="https://www.facebook.com/shaannessy" target="_blank">
+                <img src="static/facebook-logo.png" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
+            </a>
+            <a href="https://www.instagram.com/shaannessy/?hl=en" target="_blank">
+                <img src="static/ig-logo.jpeg" style="width:42px;height:42px;border:0;" alt='Does Not exist'>
+            </a>
+        </div>
+    </div>
     <hr>
-    <h2>Contact Me</h2>
+    <div class="container">
+        <div class="contact parallax" id="contact">
+            <h2>Contact Me</h2>
+        </div>    
+    </div>
+    
+    <!-- Libraries -->
     <script src="./script-main.js"></script>
+    <script src="smoothscroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Developer Code -->
+    <script src="./waypoint.js"></script>
     <script>
         AOS.init();
     </script>

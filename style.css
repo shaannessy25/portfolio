@@ -1,8 +1,6 @@
 
-
-
 /* Navbar */
-ul.nav-bar {
+/* ul.nav-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -24,14 +22,89 @@ ul.nav-bar {
   
   li a:hover {
     background-color: #111;
+  } */
+
+  body, html {
+    height: 100%;
   }
 
-/* Main body */
-body {
+  body {
     margin: 0;
     font-family: 'Roboto', 'Times New Roman', monospace;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .container > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .header{
+    background-color: cadetblue;
+  }
+
+  .skills{
+    background-color: cornflowerblue;
+    background-image: url("images/grass-1.jpg");
+  }
+
+  .work-experience {
+    background-color: darkseagreen;
+  }
+
+  .links {
+    background-color: goldenrod;
+    background-image: url("images/grass-2.jpg");
+  }
+
+  .contact {
+    background-color: indianred;
+  }
+
+  .parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .nav-bar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+
+.nav-bar > a {
+display: block;
+text-decoration: none;
+padding: 1em;
+background-color: rgba(255, 255, 255, 0.5);
+color: #000;
 }
 
+a.selected {
+background-color: rgba(0,0,0,0.5);
+color: #fff;
+}
+  
+  /* a.selected {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+  } */
 
 img {
     border-radius: 100%;
