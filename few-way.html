@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- Imported Styles  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Your Styles -->
+    <style>
+      body, html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: Helvetica;
+      }
+
+      .container {
+        height: 100%;
+      }
+
+      .container > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        padding: 2em;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .a {
+        background-color: cadetblue;
+      }
+
+      .b {
+        background-color: cornflowerblue;
+        background-image: url("images/grass-1.jpg");
+      }
+
+      .c {
+        background-color: darkseagreen;
+      }
+
+      .d {
+        background-color: goldenrod;
+        background-image: url("images/grass-2.jpg");
+      }
+
+      .e {
+        background-color: indianred;
+      }
+
+      .parallax {
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .nav-bar {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: flex;
+        flex-direction: column;
+      }
+
+.nav-bar > a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+a.selected {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+    </style>
+  </head>
+  <body> 
+
+    <div class="container">
+      <div id="a" class="a">
+        <h1 data-aos="fade-up">Physics</h1>
+      </div>
+      <div id="b" class="b parallax">
+        <h1 data-aos="fade-down">Philosophy</h1>
+      </div>
+      <div id="c" class="c">
+        <h1 data-aos="fade-right">Ethics in Tech</h1>
+      </div>
+      <div id="d" class="d parallax">
+        <h1 data-aos="fade-left">Bar</h1>
+      </div>
+      <div id="e" class="e">
+        <h1 data-aos="fade-up">The End</h1>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <a href="#a">AAAA</a>
+      <a href="#b">BBBB</a>
+      <a href="#c">CCCC</a>
+      <a href="#d">DDDD</a>
+      <a href="#e">EEEE</a>
+    </div>
+    
+    <!-- ***** Imported Scripts ***** -->
+
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="smoothscroll.js"></script>
+
+    <!-- ***** Your Scripts ***** -->
+
+    <script>
+      // --------------------------------------------
+      // Initialize Animate On Scroll
+      AOS.init();
+
+      // --------------------------------------------
+      // Waypoints
+
+      ['a', 'b', 'c', 'd', 'e'].forEach(function(id) {
+        new Waypoint({
+          element: document.getElementById(id),
+          handler: function() {
+            selectNav('#'+id)
+          }
+        })
+      })
+      
+
+      // -------------------------------------------
+      // Show the selected nav link
+
+      function selectNav(id) {
+        const navLinks = document.querySelectorAll('.nav-bar > a')
+        navLinks.forEach(function(link) {
+          if (link.getAttribute('href') === id) {
+            link.classList.add('selected')
+          } else {
+            link.classList.remove('selected')
+          }
+        })
+      }
+
+      // -------------------------------------------
+      // Scroll to Smooth
+
+// Get a reference to the body
+const body = document.querySelector('body')
+// Listen for clicks
+body.addEventListener('click', function(e) {
+  console.log(e.target)
+
+  // If a link has external class ignore it
+  if (e.target.matches('.external')) {
+    return
+  }
+
+  // Prevent the default behavior
+  e.preventDefault()
+
+  // Prepare to scroll
+  // Get the href from the target
+  const href = e.target.closest('a').href
+  if (href) {
+    // Select the current link
+    selectNav(href)
+    // Scroll to the id that matches the href
+    const id = href.split('#')[1]
+    document.getElementById(id).scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  } 
+})
+    </script>
+  </body>
+</html>

@@ -30,7 +30,7 @@
 
   body {
     margin: 0;
-    font-family: 'Roboto', 'Times New Roman', monospace;
+    font-family: 'Overpass';
   }
 
   .container {
@@ -51,24 +51,27 @@
 
   .header{
     background-color: cadetblue;
+    background-image: url("./blue.jpg");
   }
 
   .skills{
     background-color: cornflowerblue;
-    background-image: url("images/grass-1.jpg");
+    background-image: url("./purple.jpg");
   }
 
   .work-experience {
     background-color: darkseagreen;
+    background-image: url("./blue2.jpg");
   }
 
-  .links {
+  .lnks {
     background-color: goldenrod;
-    background-image: url("images/grass-2.jpg");
+    background-image: url("./purple2.jpg");
   }
 
   .contact {
     background-color: indianred;
+    background-image: url("./blue3.jpg")
   }
 
   .parallax {
