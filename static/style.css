@@ -31,6 +31,8 @@
   body {
     margin: 0;
     font-family: 'Overpass';
+    color: rgba(255, 255, 255, 0.957);
+    
   }
 
   .container {
@@ -39,14 +41,20 @@
 
   .container > div {
     height: 100%;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
   }
 
-  h1 {
+  h1, h2{
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+  }
+  p {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
   }
 
   .header{
@@ -111,4 +119,27 @@ color: #fff;
 
 img {
     border-radius: 100%;
+}
+
+
+.centered{
+  width: 50%;
+  margin: auto;
+
+
+}
+.header-image{
+  justify-content: center;
+}
+
+.img-center {
+ margin-left: 50%;
+ left: 50%;
+ position: absolute;
+}
+
+
+.lkn-flex {
+  display: flex;
+  justify-content: space-between;
 }
