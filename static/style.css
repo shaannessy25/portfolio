@@ -48,6 +48,7 @@
 
   h1, h2{
     padding: 1em;
+    margin: 0;
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
   }
@@ -57,9 +58,13 @@
     text-align: center;
     font-size: 24px;
   }
+  strong {
+    text-align: left;
+
+  }
   li{
     background-color: rgba(255, 255, 255, 0.5);
-    list-style-image: url('./sqpurplefix.png');
+    list-style: none;
     text-align: center;
     font-size: 24px;
   }
@@ -124,19 +129,20 @@ color: #fff;
     color: #fff;
   } */
 
-img {
-    border-radius: 100%;
+img{
+  border-radius: 100%;
 }
 
 
 .centered{
   width: 50%;
   margin: auto;
-
-
 }
+
 .header-image{
-  justify-content: center;
+  position: relative;
+  left: 50%;
+
 }
 
 .header-logo img{
@@ -148,9 +154,35 @@ img {
 
 
 
-
-
 .lkn-flex {
+  margin-top: 35%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(54, 54, 54, 0.295);
+  color: white;
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 12px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 10px;
+  }
 }
