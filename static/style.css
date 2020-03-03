@@ -1,35 +1,11 @@
-
-/* Navbar */
-/* ul.nav-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  } */
-
-  body, html {
-    height: 100%;
-  }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 
   body {
     margin: 0;
+    height: 100%;
     font-family: 'Overpass';
     color: rgba(255, 255, 255, 0.957);
     
@@ -139,9 +115,10 @@ img{
   margin: auto;
 }
 
-.header-image{
-  position: relative;
-  left: 50%;
+.img-center{
+ display: flex;
+ margin: auto;
+ 
 
 }
 
