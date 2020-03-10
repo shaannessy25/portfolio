@@ -47,11 +47,7 @@ strong {
   margin: auto;
 
 }
-ul{
-  border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px black;
-}
+
 li{
   background-color: rgba(201, 216, 221, 0.38);
   list-style: none;
@@ -163,10 +159,6 @@ img{
  padding-top: 30px;
 
 }
-
-
-
-
 
 .header-logo img{
   
